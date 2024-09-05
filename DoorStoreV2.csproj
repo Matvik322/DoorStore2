@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9ED804E9-B020-42E4-A344-480A0F150650}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DoorStoreV2</RootNamespace>
+    <AssemblyName>DoorStoreV2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
+      <HintPath>packages\BouncyCastle.Cryptography.2.2.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.25.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Protobuf.3.25.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.1.3.5\lib\net462\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.3.5.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.Streams.1.3.5\lib\net462\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.8.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Hash.xxHash.1.0.8\lib\net462\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.3.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.3.0\lib\net462\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Configuration.ConfigurationManager.4.4.1\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Diagnostics.DiagnosticSource.7.0.2\lib\net462\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Pipelines, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Pipelines.5.0.2\lib\net461\System.IO.Pipelines.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ZstdSharp, Version=0.7.1.0, Culture=neutral, PublicKeyToken=8d151af33a4ad5cf, processorArchitecture=MSIL">
+      <HintPath>packages\ZstdSharp.Port.0.7.1\lib\net461\ZstdSharp.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddForms\AddClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddForms\AddClients.Designer.cs">
+      <DependentUpon>AddClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddForms\AddDoor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddForms\AddDoor.Designer.cs">
+      <DependentUpon>AddDoor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddForms\AddDoorInOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddForms\AddDoorInOrder.Designer.cs">
+      <DependentUpon>AddDoorInOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddForms\AddManufacturers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddForms\AddManufacturers.Designer.cs">
+      <DependentUpon>AddManufacturers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddForms\AddOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddForms\AddOrders.Designer.cs">
+      <DependentUpon>AddOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddForms\AddStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddForms\AddStaff.Designer.cs">
+      <DependentUpon>AddStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddForms\AddTypeDoor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddForms\AddTypeDoor.Designer.cs">
+      <DependentUpon>AddTypeDoor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\ComboboxLoader.cs" />
+    <Compile Include="Classes\DbConnectionClass.cs" />
+    <Compile Include="Classes\DbUtility.cs" />
+    <Compile Include="Classes\Hashing.cs" />
+    <Compile Include="Classes\LoadDataAsync.cs" />
+    <Compile Include="Classes\PassValidation.cs" />
+    <Compile Include="Classes\ReloadButton.cs" />
+    <Compile Include="Classes\TextHelper.cs" />
+    <Compile Include="Classes\ValidationLogin.cs" />
+    <Compile Include="DeleteForms\DeleteClients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteForms\DeleteClients.Designer.cs">
+      <DependentUpon>DeleteClients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteForms\DeleteDoor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteForms\DeleteDoor.Designer.cs">
+      <DependentUpon>DeleteDoor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteForms\DeleteDoorInOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteForms\DeleteDoorInOrder.Designer.cs">
+      <DependentUpon>DeleteDoorInOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteForms\DeleteManufacturers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteForms\DeleteManufacturers.Designer.cs">
+      <DependentUpon>DeleteManufacturers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteForms\DeleteOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteForms\DeleteOrders.Designer.cs">
+      <DependentUpon>DeleteOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteForms\DeleteStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteForms\DeleteStaff.Designer.cs">
+      <DependentUpon>DeleteStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DeleteForms\DeleteTypeDoor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteForms\DeleteTypeDoor.Designer.cs">
+      <DependentUpon>DeleteTypeDoor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Clients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\Clients.Designer.cs">
+      <DependentUpon>Clients.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Door.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\Door.Designer.cs">
+      <DependentUpon>Door.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\DoorsInOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\DoorsInOrder.Designer.cs">
+      <DependentUpon>DoorsInOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Manufacturers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\Manufacturers.Designer.cs">
+      <DependentUpon>Manufacturers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Orders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\Orders.Designer.cs">
+      <DependentUpon>Orders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\Staff.Designer.cs">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForms\Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\Report.Designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MainForms\TypeDoor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForms\TypeDoor.Designer.cs">
+      <DependentUpon>TypeDoor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReloadForms\ReloadCountDoor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReloadForms\ReloadCountDoor.Designer.cs">
+      <DependentUpon>ReloadCountDoor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReloadForms\ReloadDateDoor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReloadForms\ReloadDateDoor.Designer.cs">
+      <DependentUpon>ReloadDateDoor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReloadForms\ReloadStatusOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReloadForms\ReloadStatusOrders.Designer.cs">
+      <DependentUpon>ReloadStatusOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReloadForms\SelectReloadDoor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReloadForms\SelectReloadDoor.Designer.cs">
+      <DependentUpon>SelectReloadDoor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForms\GraphBalance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForms\GraphBalance.Designer.cs">
+      <DependentUpon>GraphBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForms\GraphSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForms\GraphSalary.Designer.cs">
+      <DependentUpon>GraphSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForms\GraphProcurementCosts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForms\GraphProcurementCosts.Designer.cs">
+      <DependentUpon>GraphProcurementCosts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportForms\GraphSalesProfit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReportForms\GraphSalesProfit.Designer.cs">
+      <DependentUpon>GraphSalesProfit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUp.Designer.cs">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddForms\AddClients.resx">
+      <DependentUpon>AddClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddForms\AddDoor.resx">
+      <DependentUpon>AddDoor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddForms\AddDoorInOrder.resx">
+      <DependentUpon>AddDoorInOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddForms\AddManufacturers.resx">
+      <DependentUpon>AddManufacturers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddForms\AddOrders.resx">
+      <DependentUpon>AddOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddForms\AddStaff.resx">
+      <DependentUpon>AddStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddForms\AddTypeDoor.resx">
+      <DependentUpon>AddTypeDoor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteForms\DeleteClients.resx">
+      <DependentUpon>DeleteClients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteForms\DeleteDoor.resx">
+      <DependentUpon>DeleteDoor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteForms\DeleteDoorInOrder.resx">
+      <DependentUpon>DeleteDoorInOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteForms\DeleteManufacturers.resx">
+      <DependentUpon>DeleteManufacturers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteForms\DeleteOrders.resx">
+      <DependentUpon>DeleteOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteForms\DeleteStaff.resx">
+      <DependentUpon>DeleteStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeleteForms\DeleteTypeDoor.resx">
+      <DependentUpon>DeleteTypeDoor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Clients.resx">
+      <DependentUpon>Clients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Door.resx">
+      <DependentUpon>Door.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\DoorsInOrder.resx">
+      <DependentUpon>DoorsInOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Manufacturers.resx">
+      <DependentUpon>Manufacturers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Orders.resx">
+      <DependentUpon>Orders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForms\Staff.resx">
+      <DependentUpon>Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MainForms\TypeDoor.resx">
+      <DependentUpon>TypeDoor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReloadForms\ReloadCountDoor.resx">
+      <DependentUpon>ReloadCountDoor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReloadForms\ReloadDateDoor.resx">
+      <DependentUpon>ReloadDateDoor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReloadForms\ReloadStatusOrders.resx">
+      <DependentUpon>ReloadStatusOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReloadForms\SelectReloadDoor.resx">
+      <DependentUpon>SelectReloadDoor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForms\GraphBalance.resx">
+      <DependentUpon>GraphBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForms\GraphSalary.resx">
+      <DependentUpon>GraphSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForms\GraphProcurementCosts.resx">
+      <DependentUpon>GraphProcurementCosts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportForms\GraphSalesProfit.resx">
+      <DependentUpon>GraphSalesProfit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
